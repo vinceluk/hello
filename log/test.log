@@ -1,0 +1,59 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "hellos" [0m
+
+
+Processing HellosController#create (for 0.0.0.0 at 2009-08-09 13:53:25) [POST]
+  Parameters: {"hello"=>{}}
+  [4;35;1mHello Create (0.3ms)[0m   [0mINSERT INTO "hellos" ("updated_at", "greeting", "created_at") VALUES('2009-08-09 20:53:25', NULL, '2009-08-09 20:53:25')[0m
+Redirected to http://test.host/hellos/2053932786
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/hellos?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "hellos" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "hellos" [0m
+  [4;36;1mHello Load (0.2ms)[0m   [0;1mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+
+
+Processing HellosController#destroy (for 0.0.0.0 at 2009-08-09 13:53:25) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mHello Load (0.2ms)[0m   [0mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+  [4;36;1mHello Destroy (0.2ms)[0m   [0;1mDELETE FROM "hellos" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/hellos
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/hellos/2053932785]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "hellos" [0m
+  [4;36;1mHello Load (0.3ms)[0m   [0;1mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+
+
+Processing HellosController#edit (for 0.0.0.0 at 2009-08-09 13:53:25) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mHello Load (0.2ms)[0m   [0mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+Rendering template within layouts/hellos
+Rendering hellos/edit
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/hellos/2053932785/edit]
+
+
+Processing HellosController#index (for 0.0.0.0 at 2009-08-09 13:53:25) [GET]
+  [4;36;1mHello Load (0.3ms)[0m   [0;1mSELECT * FROM "hellos" [0m
+Rendering template within layouts/hellos
+Rendering hellos/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/hellos]
+
+
+Processing HellosController#new (for 0.0.0.0 at 2009-08-09 13:53:25) [GET]
+Rendering template within layouts/hellos
+Rendering hellos/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/hellos/new]
+  [4;35;1mHello Load (0.3ms)[0m   [0mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+
+
+Processing HellosController#show (for 0.0.0.0 at 2009-08-09 13:53:25) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;36;1mHello Load (0.2ms)[0m   [0;1mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+Rendering template within layouts/hellos
+Rendering hellos/show
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/hellos/2053932785]
+  [4;35;1mHello Load (0.2ms)[0m   [0mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+
+
+Processing HellosController#update (for 0.0.0.0 at 2009-08-09 13:53:25) [PUT]
+  Parameters: {"id"=>"2053932785", "hello"=>{}}
+  [4;36;1mHello Load (0.2ms)[0m   [0;1mSELECT * FROM "hellos" WHERE ("hellos"."id" = 2053932785) [0m
+Redirected to http://test.host/hellos/2053932785
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/hellos/2053932785?]
